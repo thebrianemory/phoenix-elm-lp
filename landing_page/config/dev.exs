@@ -51,7 +51,7 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :landing_page, LandingPage.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
+  username: "thebrianemory",
   password: "postgres",
   database: "landing_page_dev",
   hostname: "localhost",

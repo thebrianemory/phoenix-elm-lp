@@ -12,7 +12,7 @@ config :logger, level: :warn
 # Configure your database
 config :landing_page, LandingPage.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
+  username: "thebrianemory",
   password: "postgres",
   database: "landing_page_test",
   hostname: "localhost",
