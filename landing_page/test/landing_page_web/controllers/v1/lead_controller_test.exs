@@ -6,9 +6,9 @@ defmodule LandingPageWeb.V1.LeadControllerTest do
       conn = post(conn, lead_path(conn, :create), %{"lead" => %{}})
 
       assert json_response(conn, 422) == %{
-        "full_name" => ["can't be blank"],
-        "email" => ["can't be blank"]
-      }
+               "full_name" => ["can't be blank"],
+               "email" => ["can't be blank"]
+             }
     end
 
     test "returns success response with valid params", %{conn: conn} do
