@@ -1,6 +1,12 @@
 defmodule LandingPageWeb.ErrorView do
   use LandingPageWeb, :view
 
+  import LandingPageWeb.ErrorHelpers
+
+  def render("error.json", %{changeset: changeset}) do
+    Ecto.Changeset.traverse_errors(changeset, &translate_error/1)
+  end
+
   def render("404.html", _assigns) do
     "Page not found"
   end
